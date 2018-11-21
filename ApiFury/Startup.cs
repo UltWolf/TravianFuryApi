@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using System.Text;
 using System.Threading.Tasks;
 using ApiFury.Helpers;
 using ApiFury.Services;
@@ -9,14 +6,12 @@ using AutoMapper;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Logging;
-using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
+
 
 namespace ApiFury
 {
@@ -34,7 +29,8 @@ namespace ApiFury
         {
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
             services.AddCors();
-            services.AddDbContext<DataContext>(opt => opt.UseSqlServer(Configuration.GetConnectionString("TravianConnection")));
+            services.AddDbContext<DataContext>(opt =>
+            opt.UseNpgsql("Host=localhost;Port=5432;Database=TravianFury;Username=u;Password=230398Vetal"));
             services.AddMvc();
             services.AddAutoMapper();
             var appSettingsSection = Configuration.GetSection("AppSettings");

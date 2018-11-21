@@ -1,4 +1,5 @@
 using ApiFury.Models;
+using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
 
 namespace ApiFury.Entities
@@ -15,6 +16,8 @@ namespace ApiFury.Entities
         public List<Villages> Villages {get;set;}
         //This our villages
         public List<MyVillages> MyVillages {get;set;}
+       
+        public List<Task> tasks{get;set;}
         public string token    {get;set;}
         public byte[] PasswordHash { get; set; }
         public byte[] PasswordSalt { get; set; }
