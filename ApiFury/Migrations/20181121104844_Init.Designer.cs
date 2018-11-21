@@ -10,15 +10,15 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace ApiFury.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20181121112356_init")]
-    partial class init
+    [Migration("20181121104844_Init")]
+    partial class Init
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
                 .HasAnnotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.SerialColumn)
-                .HasAnnotation("ProductVersion", "2.1.4-rtm-31024")
+                .HasAnnotation("ProductVersion", "2.1.2-rtm-30932")
                 .HasAnnotation("Relational:MaxIdentifierLength", 63);
 
             modelBuilder.Entity("ApiFury.Entities.Task", b =>
