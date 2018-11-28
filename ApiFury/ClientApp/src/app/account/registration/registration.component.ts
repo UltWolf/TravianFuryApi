@@ -12,11 +12,12 @@ export class RegistrationComponent implements OnInit {
     name: "Please input your name",
     password: "Please input your password"
   }
-  constructor() { }
   CreateUser(newUser:User){
     console.log(this.user);
   }
 
+  constructor() { }
+  
   ngOnInit() {
   }
 

@@ -1,3 +1,5 @@
 <input [(ngModel)]="user.name" placeholder="Name" type="text">
+
 <input [(ngModel)]="user.password" placeholder="password" type="password">
-<input type="button" onclick="CreateUser(user)"/>
+
+<input type="button" (click)="CreateUser(user)"/>

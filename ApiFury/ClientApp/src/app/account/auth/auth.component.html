@@ -1,3 +1,5 @@
-<p>
-  auth works!
-</p>
+<input [(ngModel)]="user.name" placeholder="Name" type="text">
+
+<input [(ngModel)]="user.password" placeholder="password" type="password">
+
+<input type="button" (click)="Login(user)"/>
